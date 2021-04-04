@@ -5,8 +5,9 @@
 #### 技术栈
 vue2 + vuex + vue-router + webpack + ES6/7 + axios + elementUI + 阿里图标iconfont
 
-#### 项目预览
-[http://nmgwap.gitee.io/vueproject/#/login](http://nmgwap.gitee.io/vueproject/#/login)
+#### 项目分支
+master V1.0
+develop 开发分支
 
 
 #### 说明
@@ -104,7 +105,7 @@ npm test
 #### 项目源码地址：
 ------------------------
 
-github地址：https://github.com/nmgwap/vue-ManagementPlatform.git  
+github地址：https://github.com/shengge520/vue-mini-app.git  
 
 
 #### 微信公众号
