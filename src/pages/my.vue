@@ -143,8 +143,6 @@ export default {
     //获取地区列表
     onMyAddressChange(picker, values) {
       if (myaddress[values[0]]) {
-        console.log("1", myaddress);
-        console.log("2", values);
         //这个判断类似于v-if的效果（可以不加，但是vue会报错，很不爽）
         picker.setSlotValues(1, Object.keys(myaddress[values[0]])); // Object.keys()会返回一个数组，当前省的数组
         picker.setSlotValues(2, myaddress[values[0]][values[1]]); // 区/县数据就是一个数组

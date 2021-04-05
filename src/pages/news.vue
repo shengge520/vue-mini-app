@@ -44,7 +44,6 @@
         var _this = this
         _this.$http.get(_this.url).then(
           response => {
-            console.log(response)
             for (var i = 0; i < response.data.length; i++) {
               if (response.data[i].id == id) {
                 _this.newsdetails.push(response.data[i])

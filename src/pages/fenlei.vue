@@ -69,10 +69,8 @@
         },
         beforeCreate() {},
         created() {
-            console.log("created");
             var _this = this;
             this.$http.get(_this.url).then(function(res) {
-                console.log(res.data);
                 _this.tablists = res.data;
                 _this.catelist = res.data[0].cateitems;
             });
@@ -95,9 +93,7 @@
             Switch: function(index) {
                 var _this = this;
                 _this.tabindex = index;
-                console.log(index, "index");
                 _this.catelist = _this.tablists[index].cateitems;
-
             },
             // 详情
             godetails: function(id) {

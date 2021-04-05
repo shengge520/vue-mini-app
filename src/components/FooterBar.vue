@@ -53,7 +53,6 @@
 
         },
         mounted(){
-          console.log('gg', this.$route.path, this.active)
           //  this.active = this.$route.path.slice(1);
         }
     }

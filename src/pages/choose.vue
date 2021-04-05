@@ -128,7 +128,6 @@
 
                 _this.$http.get(_this.url).then(
                     response => {
-                        console.log(response, '666');
 
                         // get body data
                         _this.all = response.data;

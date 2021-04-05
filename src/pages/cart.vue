@@ -86,7 +86,6 @@
     },
     computed: {
       carts() {
-        console.log(this.$store.state.carts)
         //这里是计算价格
         var sum = 0
         for (var i = 0; i < this.$store.state.carts.length; i++) {
