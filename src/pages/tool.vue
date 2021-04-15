@@ -30,6 +30,7 @@
 import Footer from "../components/FooterBar.vue";
 import headerTwo from "../components/headerTwo.vue";
 import { Indicator } from "mint-ui"; //引入mint ui
+import {toolList} from "@/mock/shopList.js";
 export default {
   // 开始
   components: {
@@ -41,29 +42,10 @@ export default {
   data() {
     return {
       newTitle:'新闻中心',
-      news: [],
-      url:
-        "https://www.easy-mock.com/mock/59e95287dd7e1a0a448c1102/example/news"
+      news: toolList,
     };
   },
   created: function() {
-    var _this = this;
-    // 创建动画mint-ui
-    Indicator.open({
-      text: "加载中...",
-      spinnerType: "fading-circle"
-    });
-    _this.$http.get(_this.url).then(
-      response => {
-        console.log(response);
-        // get body data
-        _this.news = response.data;
-        Indicator.close(); // // 关闭动画
-      },
-      response => {
-        // error callback
-      }
-    );
   },
   methods: {
     newsdetails: function(id) {

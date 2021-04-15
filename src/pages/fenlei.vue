@@ -28,7 +28,7 @@
                     <img v-bind:src="imgs.img" alt="">
                   </div>
                   <span class="items_name">
-                    小米手机
+                    {{imgs.name}}
                   </span>
                 </div>
               </div>
@@ -45,11 +45,12 @@
 <script>
     // 引入better-scroll
     import Footer from "../components/FooterBar.vue";
-      import headerTwo from "../components/headerTwo.vue";
+    import headerTwo from "../components/headerTwo.vue";
     import BScroll from "better-scroll";
     import {
         Indicator
     } from "mint-ui"; //引入mint ui
+    import {shopCategory} from "@/mock/shopList.js";
     export default {
         // 开始
         components: {
@@ -62,21 +63,16 @@
             return {
                 newTitle:'商品分类',
                 tabindex: "0",
-                url: "https://www.easy-mock.com/mock/59e95287dd7e1a0a448c1102/example/fenlei",
-                catelist: "",
-                tablists: ""
+                catelist: shopCategory[0].cateitems,
+                tablists: shopCategory
             };
         },
         beforeCreate() {},
         created() {
-            var _this = this;
-            this.$http.get(_this.url).then(function(res) {
-                _this.tablists = res.data;
-                _this.catelist = res.data[0].cateitems;
-            });
+
         },
         mounted() {
-          this.tabindex = 0;
+            this.tabindex = 0;
             this.scroll = new BScroll(this.$refs.menuWrapper, {
                 //开启点击事件 默认为false。有的真机为false触发不了点击
                 click: true,

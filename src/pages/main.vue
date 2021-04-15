@@ -75,15 +75,13 @@
 
     </div>
 </template>
-
-<!-- <footer-bar class="footer"></footer-bar> -->
 <script>
     // 引入组件
     import Vue from 'vue'
     import Footer from '../components/FooterBar'
     import headerTwo from "../components/headerTwo.vue";
     import global_ from './Globaldata'
-
+    import {shopList} from "@/mock/shopList.js"
     import {
         Indicator
     } from 'mint-ui' //引入mint ui
@@ -101,13 +99,12 @@
                 allLoaded: false,
                 scrollMode: "touch", //移动端弹性滚动效果，touch为弹性滚动，auto是非弹性滚动
                 showtop: false, //top
-                items: [],
+                items: shopList,
                 swipers: [
                     'https://i8.mifile.cn/b2c-mimall-media/2fcbb6794e9f99d33bdf1f76cf380af0.jpg',
                     'https://i8.mifile.cn/b2c-mimall-media/2be6be33c4131cfb2801ae41a2a84748.jpg',
                     'https://i8.mifile.cn/b2c-mimall-media/d77913ecf914900557c0f9befedfc9bc.jpg'
                 ],
-                url: 'https://www.easy-mock.com/mock/59e95287dd7e1a0a448c1102/example/todos',
                 timer: null,
                 //定义一个定时器
                 isTop: true, //定义一个布尔值，用于判断是否到达顶部
@@ -118,17 +115,11 @@
         computed: {},
         created: function () {
             console.log('created', global_)
-            this.getData();
         },
         beforeMount() {
         },
         mounted: function () {
             var _this = this
-            _this.$postHttp('https://www.easy-mock.com/mock/59e95287dd7e1a0a448c1102/example/demo', {})
-                .then((response) => {
-                    console.log(response, 'gggg')
-                })
-
             var obtn = document.getElementById('btn'); //获取回到顶部按钮的ID
             var clientHeight = document.documentElement.clientHeight; //获取可视区域的高度
             window.onscroll = function () { //监听事件内容
@@ -143,47 +134,7 @@
                     clearInterval(_this.timer);
                 }
                 _this.isTop = false;
-
             }
-
-            // 触摸事件
-            // document.addEventListener('touchstart', touch, false)
-            // document.addEventListener('touchmove', touch, false)
-            // document.addEventListener('touchend', touch, false)
-            // function touch(event) {
-            //   var event = event || window.event
-            //   var oInp = document.getElementById('app')
-            //   switch (event.type) {
-            //     case 'touchstart':
-            //       console.log(
-            //         'Touch started (' +
-            //           event.touches[0].clientX +
-            //           ',' +
-            //           event.touches[0].clientY +
-            //           ')'
-            //       )
-            //       break
-            //     case 'touchend':
-            //       console.log(
-            //         '<br>Touch end (' +
-            //           event.changedTouches[0].clientX +
-            //           ',' +
-            //           event.changedTouches[0].clientY +
-            //           ')'
-            //       )
-            //       break
-            //     case 'touchmove':
-            //       event.preventDefault()
-            //       console.log(
-            //         '<br>Touch moved (' +
-            //           event.touches[0].clientX +
-            //           ',' +
-            //           event.touches[0].clientY +
-            //           ')'
-            //       )
-            //       break
-            //   }
-            // }
         },
         beforeUpdate: function () {
             console.log('beforeUpdate')
@@ -198,10 +149,6 @@
             console.log('destroyed')
         },
         methods: {
-          async  getData(){
-            let  response = await this.$getHttp(this.url, {})
-                this.items = response
-            },
             // top
             loadTop() {
                 console.log('刷新')
@@ -272,7 +219,7 @@
     }
 </script>
 
-<style lang="css" scoped>
+<style lang="stylus" scoped>
     .box {
         padding-bottom: 0.8rem;
     }

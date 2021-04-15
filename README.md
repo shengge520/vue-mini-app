@@ -72,6 +72,11 @@ develop 开发分支
 
 #### 部分截图
 -----------------------
+![首页](./static/explain/main.png)
+![分类](./static/explain/fenlei.png)
+![新闻](./static/explain/tool.png)
+![购物车](./static/explain/购物车.png)
+![个人中心](./static/explain/个人中心.png)
 
 
 #### 运行项目
