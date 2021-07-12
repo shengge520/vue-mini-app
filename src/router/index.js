@@ -1,22 +1,22 @@
 import Vue from "vue";
 import Router from "vue-router";
 import FooterBar from "@/components/FooterBar";
-import main from "../pages/main.vue";
-import tool from "../pages/tool.vue";
-import my from "../pages/my.vue";
-import details from "../pages/details.vue";
-import choose from "../pages/choose.vue";
-import cart from "../pages/cart.vue";
-import all_order from "../pages/all_order.vue";
-import news from "../pages/news.vue";
-import need from "../pages/need.vue";
-import qiangou from "../pages/qiangou.vue";
-import fabu from "../pages/fabu.vue";
-import mifenka from "../pages/mifenka.vue";
-import fenlei from "../pages/fenlei.vue";
-import login from "../pages/login.vue";
-import notfound from "../pages/404.vue";
-import load from "../pages/load.vue";
+import main from "../views/main.vue";
+import tool from "../views/tool.vue";
+import my from "../views/my.vue";
+import details from "../views/details.vue";
+import choose from "../views/choose.vue";
+import cart from "../views/cart.vue";
+import all_order from "../views/all_order.vue";
+import news from "../views/news.vue";
+import need from "../views/need.vue";
+import qiangou from "../views/qiangou.vue";
+import fabu from "../views/fabu.vue";
+import mifenka from "../views/mifenka.vue";
+import fenlei from "../views/fenlei.vue";
+import login from "../views/login.vue";
+import notfound from "../views/404.vue";
+import load from "../views/load.vue";
 Vue.use(Router);
 export default new Router({
 	// mode: "history", //改为history.路由中没有#号
@@ -31,7 +31,7 @@ export default new Router({
 			path: "/login",
 			name: "login",
 			// component: login,
-			component: () =>import("../pages/login.vue"),
+			component: () =>import("../views/login.vue"),
 
 		},
 		{
