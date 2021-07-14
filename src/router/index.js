@@ -13,7 +13,7 @@ import need from "../views/need.vue";
 import qiangou from "../views/qiangou.vue";
 import fabu from "../views/fabu.vue";
 import mifenka from "../views/mifenka.vue";
-import fenlei from "../views/fenlei.vue";
+// import fenlei from "../views/fenlei.vue";
 import login from "../views/login.vue";
 import notfound from "../views/404.vue";
 import load from "../views/load.vue";
@@ -47,7 +47,7 @@ export default new Router({
 		{
 			path: "/fenlei",
 			name: "fenlei",
-			component: fenlei
+			component: () =>import("../views/fenlei.vue")
 		},
 		{
 			path: "/tool",
