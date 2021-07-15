@@ -35,6 +35,7 @@ develop 开发分支
 │ ├── /api/          # 请求
 │ ├── /assets/       # 组件静态资源(图片)
 │ ├── /components/   # 公共组件
+│ ├── /mock/         # mock模拟数据
 │ ├── /router/       # 路由配置
 │ ├── /store/         # vuex状态管理
 │ ├── /views/        # 各个页面
