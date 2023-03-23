@@ -27,7 +27,7 @@
           :key="index"
         >
           <div class="xl_img">
-            <img v-bind:src="phone.ImageOne" />
+            <img v-bind:src="phone.img" />
           </div>
           <p class="xl_p">{{ phone.name }}</p>
           <p class="prices">
@@ -86,12 +86,10 @@
 </template>
 <script>
 // 引入共用头部组件
-
 import header from "../components/headerOne.vue";
-
+import {shopList} from "../mock/shopList.js";//mock~data
 export default {
   // 初始化
-
   components: {
     "v-header": header
   },
@@ -100,7 +98,7 @@ export default {
     return {
       selected: "tab1",
       newTitle: "选购",
-      lists: [],
+      lists: shopList,
       all: []
     };
   },

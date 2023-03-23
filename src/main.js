@@ -27,14 +27,14 @@ Vue.use(Mint);
 // 解决移动端300s延迟
 import fastclick from "fastclick";
 fastclick.attach(document.body); //解决移动端点击事件200ms延迟
-Vue.config.productionTip = true;
+Vue.config.productionTip = true; //阻止启用生产消息
 //引入请求
 import axios from "axios";
 Vue.prototype.$http = axios;
 /*vConsole */
-import Vconsole from "vconsole";
-let vConsole = new Vconsole();
-export default vConsole;
+// import Vconsole from "vconsole";
+// let vConsole = new Vconsole();
+// export default vConsole;
 /* eslint-disable no-new */
 new Vue({
 	el: "#app",

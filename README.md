@@ -3,7 +3,7 @@
 
 
 #### 技术栈
-vue2 + vuex + vue-router + webpack + ES6/7 + axios + elementUI + 阿里图标iconfont
+vue2 + vuex + vue-router + webpack + ES6/7 + axios + mint-ui + 阿里图标iconfont
 
 #### 项目分支
 master V1.0
