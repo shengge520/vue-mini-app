@@ -117,7 +117,7 @@ github地址：https://github.com/shengge520/vue-mini-app.git
 #### 微信公众号
 ------------------------  
 > 码字不易,屏幕前的大帅比,更多干货文章请关注!!!
-<img src="https://6465-dev-xmikn-9jjtk-1302289589.tcb.qcloud.la/others/qrcode_for_gh_ff4bedce97b4_258.jpg"  width = "270" height = "270"/>
+<img src="https://s1.ax1x.com/2023/03/25/ppDCn6P.jpg"  width = "270" height = "270"/>
 
 
 
